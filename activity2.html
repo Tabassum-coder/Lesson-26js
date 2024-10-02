@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2</title>
+</head>
+<body>
+    <h3>Class Inheritance</h3>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        class car{
+            constructor(brand){
+                this.carname=brand;
+            }
+            present(){
+                return "this is "+this.carname;
+            }
+        }
+        class Model extends car{
+            constructor(brand,model){
+                super(brand);
+                this.model=model;
+            }
+            Model(){
+                return " This is "+this.present()+ " and Model is "+this.model;
+            }
+        }
+        
+        c2=new Model("Ford","Mustang");
+        document.getElementById("p1").innerHTML=c2.present();
+        document.getElementById("p2").innerHTML=c2.Model();
+    </script>
+</body>
+</html>
